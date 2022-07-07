@@ -5,5 +5,5 @@
 - yarn
 - TS
 - nextjs
-- redux toolkit
+- recoil
 - styled-components
