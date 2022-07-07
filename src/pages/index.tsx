@@ -1,7 +1,8 @@
+import {HomeBoard} from 'components/templates/Home';
 import React from 'react';
 
 function HomePage() {
-  return <div>HomePage</div>;
+  return <HomeBoard />;
 }
 
 export default HomePage;

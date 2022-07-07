@@ -11,7 +11,7 @@ export const breakpoints = {
 };
 
 export const mediaQueries = (key: keyof typeof breakpoints) =>
-  `@media (max-width: ${breakpoints[key]}px)`;
+  `@media (min-width: ${breakpoints[key]}px)`;
 
 /**
   미디어쿼리 사용방법 -> customStyled component 내에서 호출
