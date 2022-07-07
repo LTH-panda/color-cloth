@@ -1,6 +1,7 @@
 import 'commons/styles/globals.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
+import {RecoilRoot} from 'recoil';
 import {Reset} from 'styled-reset';
 
 function MyApp({Component, pageProps}: AppProps) {
@@ -11,7 +12,9 @@ function MyApp({Component, pageProps}: AppProps) {
         <title>Cloth Color Pattern</title>
       </Head>
       <Reset />
-      <Component {...pageProps} />
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
     </>
   );
 }

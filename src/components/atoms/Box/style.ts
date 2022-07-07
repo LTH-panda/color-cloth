@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 3rem;
@@ -11,4 +12,6 @@ export const Box = styled.div`
   &:hover {
     transform: scale(1.2);
   }
+  border: none;
+  background: none;
 `;

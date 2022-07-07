@@ -7,15 +7,17 @@ export type PaintProps = {
   fill: string;
   width?: number;
   height?: number;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
 function Paint({
   fill = '#000',
   width = PAINT_DEFAULT_SIZE,
   height = PAINT_DEFAULT_SIZE,
+  onClick,
 }: PaintProps) {
   return (
-    <Box>
+    <Box onClick={onClick} id={fill}>
       <PaintImage fill={fill} width={width} height={height} />
     </Box>
   );

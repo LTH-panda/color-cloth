@@ -1,11 +1,24 @@
 import React from 'react';
-import getCloths from 'utils/getCloths';
+import {useSetRecoilState} from 'recoil';
+import {currentCloth} from 'recoil/cloth';
 import ClothsView, {ClothsProps} from './view';
 
 function Cloths() {
-  const {topData, bottomData} = getCloths();
+  const setCurrentCloth = useSetRecoilState(currentCloth);
   const props: ClothsProps = {
-    cloths: [...topData, ...bottomData],
+    onClick: (e: React.MouseEvent<HTMLDivElement>) => {
+      const targetCloth = e.currentTarget.id;
+      switch (targetCloth) {
+        case 'poloShirt':
+          setCurrentCloth('top');
+          break;
+        case 'jeans':
+          setCurrentCloth('bottom');
+          break;
+        default:
+          break;
+      }
+    },
   };
 
   return <ClothsView {...props} />;

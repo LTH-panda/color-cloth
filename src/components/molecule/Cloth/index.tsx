@@ -1,16 +1,21 @@
-import {Box} from 'components/atoms';
-import {PoloShirtImage} from 'components/atoms/image/Image';
 import React from 'react';
+import {Box} from 'components/atoms';
+import {Bottom, Top} from 'recoil/cloth';
+import * as S from './style';
 
 export type ClothProps = {
-  cloth: any;
+  children: React.ReactNode;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
+  id: Top | Bottom;
 };
 
-function Cloth({cloth}: ClothProps) {
+function Cloth({children, onClick, id}: ClothProps) {
   return (
-    <Box>
-      <PoloShirtImage />
-    </Box>
+    <S.Cloth>
+      <Box id={id} onClick={onClick}>
+        {children}
+      </Box>
+    </S.Cloth>
   );
 }
 

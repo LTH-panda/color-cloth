@@ -1,16 +1,20 @@
+import {JeansImage, PoloShirtImage} from 'components/atoms/image/Image';
 import {Cloth, Palette} from 'components/molecule';
 import React from 'react';
 
 export type ClothsProps = {
-  cloths: string[];
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
-function ClothsView({cloths}: ClothsProps) {
+function ClothsView({onClick}: ClothsProps) {
   return (
     <Palette>
-      {cloths.map(c => (
-        <Cloth cloth={c} />
-      ))}
+      <Cloth onClick={onClick} id="poloShirt">
+        <PoloShirtImage />
+      </Cloth>
+      <Cloth onClick={onClick} id="jeans">
+        <JeansImage />
+      </Cloth>
     </Palette>
   );
 }
