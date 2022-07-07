@@ -1,3 +1,3 @@
-export const top = ['poloShirt'];
+export const top = ['tShirt'];
 
 export const bottom = ['jeans'];

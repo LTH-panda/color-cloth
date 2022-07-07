@@ -9,7 +9,7 @@ function Cloths() {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => {
       const targetCloth = e.currentTarget.id;
       switch (targetCloth) {
-        case 'poloShirt':
+        case 'tShirt':
           setCurrentCloth('top');
           break;
         case 'jeans':

@@ -12,6 +12,4 @@ export const Box = styled.div`
   &:hover {
     transform: scale(1.2);
   }
-  border: none;
-  background: none;
 `;

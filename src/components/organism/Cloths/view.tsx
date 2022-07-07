@@ -1,4 +1,4 @@
-import {JeansImage, PoloShirtImage} from 'components/atoms/image/Image';
+import {JeansImage, TShirtImage} from 'components/atoms/image/Image';
 import {Cloth, Palette} from 'components/molecule';
 import React from 'react';
 
@@ -9,8 +9,8 @@ export type ClothsProps = {
 function ClothsView({onClick}: ClothsProps) {
   return (
     <Palette>
-      <Cloth onClick={onClick} id="poloShirt">
-        <PoloShirtImage />
+      <Cloth onClick={onClick} id="tShirt">
+        <TShirtImage />
       </Cloth>
       <Cloth onClick={onClick} id="jeans">
         <JeansImage />

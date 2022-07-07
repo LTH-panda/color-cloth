@@ -1,5 +1,5 @@
 import {CLOTH_DEFAULT_SIZE} from 'commons/constants/number';
-import {PoloShirtImage} from 'components/atoms/image/Image';
+import {TShirtImage} from 'components/atoms/image/Image';
 import React from 'react';
 
 export type TopProps = {
@@ -13,7 +13,7 @@ function Top({
   width = CLOTH_DEFAULT_SIZE,
   height = CLOTH_DEFAULT_SIZE,
 }: TopProps) {
-  return <PoloShirtImage fill={fill} width={width} height={height} />;
+  return <TShirtImage fill={fill} width={width} height={height} />;
 }
 
 export default Top;

@@ -1,7 +1,7 @@
 import {atom} from 'recoil';
 
 export type CurrentCloth = 'top' | 'bottom';
-export type Top = 'poloShirt';
+export type Top = 'tShirt';
 export type Bottom = 'jeans';
 
 export const currentCloth = atom<CurrentCloth>({
@@ -11,7 +11,7 @@ export const currentCloth = atom<CurrentCloth>({
 
 export const top = atom<Top>({
   key: 'top',
-  default: 'poloShirt',
+  default: 'tShirt',
 });
 
 export const bottom = atom<Bottom>({
